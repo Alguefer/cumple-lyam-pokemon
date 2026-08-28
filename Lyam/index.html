@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Estás invitado a mi Cumpleaños Pokémon!</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-red: #ffcb05; /* Amarillo Pokémon */
+            --dark-blue: #1a1a40;
+            --accent-red: #ff1c1c;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #0038ff, #0077ff, #00d4ff);
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+
+        .invitation-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 4px solid #ffcb05;
+            border-radius: 20px;
+            max-width: 500px;
+            width: 100%;
+            padding: 0 0 30px 0; /* 0 a los lados para que la imagen toque el borde */
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+            position: relative;
+            animation: floatCard 4s ease-in-out infinite;
+            overflow: hidden; 
+        }
+
+        @keyframes floatCard {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+
+        /* La imagen ahora ocupará el 100% real de borde a borde superior */
+        .pokeball-img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+            margin-bottom: 20px;
+            border-radius: 16px 16px 0 0; 
+            border-bottom: 4px solid #ffcb05; 
+        }
+
+        /* Padding lateral aplicado al contenido para que no pegue con los bordes */
+        h1, p, .footer-note {
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+
+        .age-badge {
+            margin-left: 25px;
+            margin-right: 25px;
+        }
+
+        h1 {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 14px;
+            color: #ffcb05;
+            margin-bottom: 15px;
+            line-height: 1.5;
+            text-shadow: 2px 2px #ff1c1c;
+        }
+
+        .age-badge {
+            background: #ff1c1c;
+            color: white;
+            font-weight: 800;
+            font-size: 20px;
+            padding: 8px 20px;
+            border-radius: 50px;
+            display: inline-block;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(255, 28, 28, 0.4);
+            border: 2px solid #ffcb05;
+            font-family: 'Press Start 2P', cursive;
+        }
+
+        p {
+            font-size: 15px;
+            margin-bottom: 20px;
+            color: #e0e0e0;
+            line-height: 1.6;
+        }
+
+        .event-details {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 0 25px 25px 25px; /* Margen lateral para respetar el diseño */
+            border-left: 5px solid #ffcb05;
+            text-align: left;
+        }
+
+        .event-details p {
+            padding: 0; /* Reseteamos el padding interno del párrafo aquí */
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        .event-details p:last-child {
+            margin-bottom: 0;
+        }
+
+        .event-details strong {
+            color: #ffcb05;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background: #25d366;
+            color: white;
+            font-weight: 700;
+            text-decoration: none;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 16px;
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s ease;
+            border: 2px solid #ffffff;
+            font-family: 'Poppins', sans-serif;
+            margin: 0 25px; /* Margen para el botón */
+        }
+
+        .cta-btn:hover {
+            background: #20ba5a;
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6);
+        }
+
+        .footer-note {
+            margin-top: 25px;
+            font-size: 12px;
+            color: #8c9bae;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="invitation-card">
+        <!-- IMAGEN CORREGIDA Y CENTRADA: Ocupa el ancho completo arriba -->
+        <img src="/images/pokemon.jpg" alt="Fiesta Pokémon" class="pokeball-img">
+
+        <h1>¡Hola, soy Lyam y estás invitado a mi fiesta de cumpleaños!</h1>
+        <div class="age-badge">¡Cumplo 8 Años!</div>
+
+        
+
+        <div class="event-details">
+            <p>📅 <strong>Fecha:</strong> Viernes, 28 de Agosto</p>
+            <p>⏰ <strong>Hora:</strong> 1:30 PM</p>
+            <p>📍 <strong>Lugar:</strong> Mz A9 Lote 14 Urb. Manuel Arévalo III Etapa</p>
+        </div>
+
+        <p>¡Confirma tu asistencia, entrenador!</p>
+
+        <a href="https://wa.me/51916298084?text=¡Hola!%20Sí%20confirmé%20para%20el%20cumpleaños%20de%20Lyam.%20¡Allí%20estaremos!" class="cta-btn" target="_blank">
+            💬 Confirmar por WhatsApp
+        </a>
+
+        <div class="footer-note">¡Te esperamos! ⚡</div>
+    </div>
+
+</body>
+</html>
